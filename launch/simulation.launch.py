@@ -12,7 +12,7 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
 
     # Packages share directory
-    pkg_share = FindPackageShare('robot_gazebo').find('robot_gazebo')
+    pkg_share = FindPackageShare('gazebo_bringup').find('gazebo_bringup')
 
     # Files paths
     default_world_path = os.path.join(pkg_share, 'worlds/six_points.world')
