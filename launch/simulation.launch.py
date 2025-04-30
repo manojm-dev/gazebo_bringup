@@ -16,6 +16,7 @@ def generate_launch_description():
 
     # Files paths
     default_world_path = os.path.join(pkg_share, 'worlds/six_waypoints.world')
+    rviz_config = os.path.join(pkg_share, 'rviz/config.rviz')
 
     world = LaunchConfiguration('world')
     verbose = LaunchConfiguration('verbose')
@@ -30,7 +31,7 @@ def generate_launch_description():
 
         DeclareLaunchArgument(  
             name='verbose',
-            default_value='true',
+            default_value='false',
             description='Set "true" to increase messages written to terminal.'
         ),
 
@@ -68,7 +69,7 @@ def generate_launch_description():
         executable='rviz2',
         name='rviz2',
         output='screen',
-        # arguments=['-d', rviz_config],
+        arguments=['-d', rviz_config],
         parameters=[{
             'use_sim_time': True
         }],
@@ -80,5 +81,6 @@ def generate_launch_description():
         declare_arguments + [
             start_gazebo,
             spawn_robot,
+            start_rviz
         ]
     )

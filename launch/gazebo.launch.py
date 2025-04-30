@@ -30,6 +30,11 @@ def generate_launch_description():
             description='Gazebo world file'
         )
         
+        DeclareLaunchArgument(  
+            name='verbose',
+            default_value='true',
+            description='Set "true" to increase messages written to terminal.'
+        ),
     ]
     
     if 'GAZEBO_MODEL_PATH' in os.environ:
