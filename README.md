@@ -13,7 +13,24 @@ This ROS 2 package helps you **spawn any robot** into a **Gazebo simulation** en
 - Optional RViz GUI toggle
 - Clean launch config using arguments
 
----
+
+## 🛠️ Build Instructions
+
+```bash
+cd ~/ros2_ws/src
+git clone https://github.com/manojm-dev/gazebo_bringup.git
+cd ..
+colcon build --packages-select gazebo_bringup
+source install/setup.bash
+```
+
+
+## 📦 Installing Dependencies
+
+```
+cd ~/ros2_ws
+sudo apt-get update -y && rosdep update && rosdep install --from-paths src --ignore-src -y
+```
 
 ## 🛠️ Build Instructions
 
