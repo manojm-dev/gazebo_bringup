@@ -28,7 +28,7 @@ def generate_launch_description():
             name='world',
             default_value=default_world_file,
             description='Gazebo world file'
-        )
+        ),
         
         DeclareLaunchArgument(  
             name='verbose',
